@@ -48,3 +48,13 @@ html
                       td.line= number
                       td.hits
                       td.source= line.source || ' '
+
+      #failures
+        h1 Test Failures
+        for failure in cov.failures
+          .failure
+            h2(id=failure.title)= failure.title
+              span.ducation= ' (' + failure.duration +'ms)'
+            #err
+              pre= failure.err.stack
+

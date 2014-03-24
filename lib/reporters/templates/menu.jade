@@ -10,4 +10,6 @@
         if segments.length
           span.dirname= segments.join('/') + '/'
         span.basename= basename
+  li
+    a(href='#failures')= 'failures (' + cov.failures.length + ')' 
   a#logo(href='http://visionmedia.github.io/mocha/') m
